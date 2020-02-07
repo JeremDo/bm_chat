@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="public/css/bootstrap.min.css">
+    <link rel="stylesheet" href="./public/css/style.min.css">
+    <title>Document</title>
+</head>
+<body>
+    <div class="app">
+        <div class="sideList">
+            <div class="title">Bodyminute</div>
+            <div class="nameList"></div>
+            <div class="profile"></div>
+        </div>
+        <div class="sideWrapper">
+            <div class="display">
+                <div class="connexionWrapper">
+                        <div class="connect d-flex justify-content-center align-items-center flex-column">
+                            <form id="conn">
+                                    <div class="form-group">
+                                        <input type="text" class="form-control" id="pseudo" placeholder="Pseudo" name="pseudo">
+                                    </div>
+                                    <div class="form-group">
+                                        <input type="password" class="form-control" id="pass" placeholder="Mot de Passe" name="pass">
+                                    </div>
+                                    <button type="submit" class="btn btn-dark w-100" id="connSub">Se connecter</button>
+                            </form>
+                        </div>
+                </div>
+            </div>
+            <div class="message">
+                <div class="buttonBar"></div>
+                <div class="buttonWrapper">
+                    <textarea name="message" id="message" cols="30" rows="10"></textarea>
+                    <button class="sendButton">Send</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="https://unpkg.com/feather-icons"></script>
+    <script src="./public/js/socket.io.js"></script>
+    <script src="./public/js/jquery-3.4.0.min.js"></script>
+    <script src="./public/js/bootstrap.min.js"></script>
+    <script src="./public/js/connexion.js"></script>
+</body>
+</html>

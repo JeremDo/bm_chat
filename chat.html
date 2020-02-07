@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="./public/css/bootstrap.min.css">
+    <link rel="stylesheet" href="./public/css/style.min.css">
+    <title>Document</title>
+</head>
+<body>
+    <div class="app">
+        <div class="sideList">
+            <div class="title">Body'Minute</div>
+            <div class="nameList"></div>
+            <div class="profile">
+                <div class="actualColor">
+                    <span>Couleur: </span><div class="actualColorPrev"></div>
+                </div>
+                <div class="availableColors"></div>
+            </div>
+        </div>
+        <div class="sideWrapper">
+            <div class="display"></div>
+            <div class="message">
+                <div class="buttonBar">
+                    <div class="insertBtnWrapper">
+                        <i class="insertBtn return" data-type="ret" data-feather="corner-down-left"></i>
+                        <i class="insertBtn freeEdit" data-type="free" data-feather="edit-3"></i>
+                        <i class="insertBtn insertPic" data-type="img" data-feather="image"></i>
+                        <i class="insertBtn insertLnk" data-type="lnk" data-feather="link"></i>
+                        <i class="insertBtn insertYT" data-type="YT" data-feather="youtube"></i>
+                    </div>
+                    <button class="changeState bg-red" data-state="absent">Absent</button>
+                </div>
+                <div class="buttonWrapper">
+                    <textarea class="" id="message"></textarea>
+                    <button class="sendButton"><i data-feather="mail"></i></button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="https://unpkg.com/feather-icons"></script>
+    <script src="./public/js/socket.io.js"></script>
+    <script src="./public/js/jquery-3.4.0.min.js"></script>
+    <script src="./public/js/bootstrap.min.js"></script>
+    <script src="./public/js/client.js"></script>
+</body>
+</html>

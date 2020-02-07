@@ -1,0 +1,106 @@
+$orange: #ef6c00;
+$brown: #795548;
+$dark-brown: #3e2723;
+$light-brown: #a1887f;
+$blue: #2196F3;
+$dark-blue: #01579b;
+$bm-blue: #4E61A9;
+$red: #e51c23;
+$green: #4CAF50;
+$dark-green: #1b5e20;
+$violet: #4a148c;
+$teal: #009688;
+$light-teal: #80cbc4;
+$dark-teal:#004d40;
+$lime: #c6ff00 ;
+$amber: #ffc107;
+$cyan: #00bcd4;
+$pink: #e91e63;
+$light-green: #64dd17;
+$indigo: #3f51b5;
+$yellow: #ffeb3b;
+$brique:#cf4927;
+$dark-grey: #343A40;
+$cream: #fffaf0;
+
+$color-list: (
+    "orange":  #ef6c00,
+    "darkBrown": #3e2723,
+    "brown":  #795548,
+    "lightBrown": #a1887f,
+    "blue":  #2196F3,
+    "darkBlue": #01579b,
+    "bmBlue":#4E61A9,
+    "red":  #e51c23,
+    "green":  #4CAF50,
+    "darkGreen": #1b5e20,
+    "violet":  #4a148c,
+    "purple": #d500f9,
+    "teal":  #009688,
+    "darkTeal": #004d40,
+    "lime":  #c6ff00,
+    "amber":  #ffc107,
+    "cyan":  #00bcd4,
+    "pink":  #e91e63,
+    "lightGreen":  #64dd17,
+    "indigo":  #3f51b5,
+    "yellow":  #ffeb3b,
+    "darkGrey": #343A40,
+    "brique": #cf4927,
+    "cream": #fffaf0
+);
+
+$rgba-list: (
+    "orange":  rgba(239, 108, 0, 0.3),
+    "darkBrown": rgba(62, 39, 35, 0.3),
+    "brown":  rgba(121, 85, 72, 0.3),
+    "lightBrown": rgba(161, 136, 127, 0.3),
+    "blue":  rgba(33, 150, 243, 0.3),
+    "darkBlue": rgba(1, 87, 155, 0.3),
+    "bmBlue":rgba(78, 97, 169, 0.3),
+    "red":  rgba(229, 28, 35, 0.3),
+    "green":  rgba(76, 175, 80, 0.3),
+    "darkGreen": rgba(27, 94, 32, 0.3),
+    "violet":  rgba(74, 20, 140, 0.3),
+    "purple": rgba(213, 0, 249, 0.3),
+    "teal":  rgba(0, 150, 136, 0.3),
+    "darkTeal": rgba(0, 77, 64, 0.3),
+    "lime":  rgba(198, 255, 0, 0.3),
+    "amber":  rgba(255, 193, 7, 0.3),
+    "cyan":  rgba(0, 188, 212, 0.3),
+    "pink":  rgba(233, 30, 99, 0.3),
+    "lightGreen":  rgba(100, 221, 23, 0.3),
+    "indigo":  rgba(63, 81, 181, 0.3),
+    "darkGrey": rgba(52, 58, 64, 0.3),
+);
+
+@each $value in $rgba-list {
+    .lightbg-#{nth($value, 1)} {
+        background-color: nth($value, 2);
+        }
+}
+
+@each $value in $color-list {
+    .#{nth($value, 1)} {
+    color: nth($value, 2);
+    }
+
+    .bg-#{nth($value, 1)} {
+    background-color: nth($value, 2);
+    }
+
+    .border-#{nth($value, 1)} {
+    border: 1px solid;
+    border-color: nth($value, 2);
+    }
+
+    .btn-outline-#{nth($value, 1)} {
+        border: 1px solid;
+        border-color: nth($value, 2) !important;
+        color: nth($value, 2) !important;
+        &:hover{
+            background: nth($value, 2) !important;
+            color: $dark-grey !important;
+        }
+    }
+}
